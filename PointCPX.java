@@ -71,4 +71,12 @@ public class PointCPX
 		}
 	}
 
+	public double getDistance(PointCPX pointB)
+	{
+		double deltaX = getX() - pointB.getX();
+		double deltaY = getY() - pointB.getY();
+
+		return Math.sqrt((Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
+	}
+
 }
