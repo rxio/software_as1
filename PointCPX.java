@@ -79,4 +79,21 @@ public class PointCPX
 		return Math.sqrt((Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
 	}
 
+	public PointCPX rotatePoint(double rotation)
+	{
+		double radRotation = Math.toRadians(rotation);
+		double X = getX();
+		double Y = getY();
+
+		return new PointCPX('C',
+      		(Math.cos(radRotation) * X) - (Math.sin(radRotation) * Y),
+      		(Math.sin(radRotation) * X) + (Math.cos(radRotation) * Y));
+	}
+
+	public String toString()
+	{
+		return "Stored as " + 
+			(typeCoord == 'C' 
+			? "Cartesian  (" + getX() + "," + getY() + ")" 
+			: "Polar [" + getRho() + "," + getTheta() + "]") + "\n";
 }
