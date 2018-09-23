@@ -96,4 +96,6 @@ public class PointCPX
 			(typeCoord == 'C' 
 			? "Cartesian  (" + getX() + "," + getY() + ")" 
 			: "Polar [" + getRho() + "," + getTheta() + "]") + "\n";
+	}
+	
 }
